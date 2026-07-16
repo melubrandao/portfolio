@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melisa Brandao - Frontend Developer & WordPress Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="#"><span>M</span>B</a>
+    <ul class="nav-links">
+      <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="#cv"        data-i18n="nav_cv">CV</a></li>
+      <li><a href="#contact"   data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn"        onclick="setLang('es')">ES</button>
+      </div>
+      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">??</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero" id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb"></div>
+
+    <div class="hero-left">
+      <div class="hero-badge" data-i18n="hero_badge">Available for new projects</div>
+      <h1 class="hero-title">
+        <span data-i18n="hero_t1">Frontend</span><br>
+        <span class="c-accent" data-i18n="hero_t2">Developer &amp;</span><br>
+        <span class="c-mid"    data-i18n="hero_t3">WP Specialist</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero_desc">
+        10+ years building responsive websites and custom WordPress solutions for international clients. Specialized in frontend development, UX/UI implementation, and AI-enhanced workflows.
+      </p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-primary"   data-i18n="hero_cta1">View work</a>
+        <a href="#contact"   class="btn-secondary" data-i18n="hero_cta2">Get in touch</a>
+      </div>
+    </div>
+
+    <!-- HERO RIGHT: animated skill focus -->
+    <div class="hero-right hero-focus-side" aria-hidden="true">
+      <div class="hero-focus-window">
+        <div class="hero-focus-list" id="hero-focus-list">
+          <div class="hero-focus-item">Responsive websites</div>
+          <div class="hero-focus-item">Custom WordPress</div>
+          <div class="hero-focus-item">UX/UI implementation</div>
+          <div class="hero-focus-item">AI-enhanced workflows</div>
+          <div class="hero-focus-item">WooCommerce stores</div>
+          <div class="hero-focus-item">Frontend development</div>
+          <div class="hero-focus-item">Performance optimization</div>
+          <div class="hero-focus-item">UI design and branding</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="section-inner">
+      <div class="portfolio-header reveal">
+        <div class="section-label" data-i18n="port_label">Selected Work</div>
+        <h2 class="section-title" data-i18n="port_title">Recent Projects</h2>
+        <p class="section-sub"    data-i18n="port_sub">Real work for real clients - websites, UI design and branding.</p>
+      </div>
+      <div class="projects-grid reveal" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv">
+    <div class="section-inner">
+      <div class="cv-header reveal">
+        <div class="section-label" data-i18n="cv_label">Resume</div>
+        <h2 class="section-title"  data-i18n="cv_title">10 years of building the web</h2>
+        <p class="section-sub"     data-i18n="cv_desc">Frontend Developer and WordPress Specialist with 10+ years of experience building responsive websites and digital experiences for international clients. Experienced with remote teams, AI-assisted workflows, and performance-focused frontend development.</p>
+
+        <!-- counters - no background, between text and buttons -->
+        <div class="cv-counters reveal">
+          <div class="cv-counter">
+            <div class="cv-counter-num"><span class="count" data-target="10">0</span><span>+</span></div>
+            <div class="cv-counter-label" data-i18n="stat1">Years of experience</div>
+          </div>
+          <div class="cv-counter">
+            <div class="cv-counter-num"><span class="count" data-target="50">0</span><span>+</span></div>
+            <div class="cv-counter-label" data-i18n="stat2">Projects delivered</div>
+          </div>
+          <div class="cv-counter">
+            <div class="cv-counter-num"><span class="count" data-target="6">0</span><span>+</span></div>
+            <div class="cv-counter-label" data-i18n="stat3">Years teaching</div>
+          </div>
+        </div>
+
+        <div class="cv-actions">
+          <a href="pdf/cv-melisa-brandao.pdf" download class="btn-dark">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span data-i18n="cv_dl">Download CV</span>
+          </a>
+          <a href="mailto:melubrandao@gmail.com" class="btn-ghost" data-i18n="cv_talk">Let's talk</a>
+        </div>
+      </div>
+      <div class="cv-cards reveal">
+        <!-- Frontend Dev: animated code brackets -->
+        <div class="cv-card">
+          <div class="cv-icon icon-code">
+            <span class="bracket bracket-l">{</span>
+            <span class="slash">/</span>
+            <span class="bracket bracket-r">}</span>
+          </div>
+          <div class="cv-card-title" data-i18n="cvh1">Frontend Dev</div>
+          <div class="cv-card-desc">HTML5 · CSS3 · SASS · JavaScript · Tailwind · Bootstrap</div>
+        </div>
+
+        <!-- WordPress: spinning globe -->
+        <div class="cv-card">
+          <div class="cv-icon icon-globe">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+              <circle cx="26" cy="26" r="22" stroke="#a98bfd" stroke-width="2" opacity=".4"/>
+              <circle cx="26" cy="26" r="22" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+              <!-- meridians that appear to spin -->
+              <ellipse cx="26" cy="26" rx="10" ry="22" stroke="#7c5cfc" stroke-width="1.5" opacity=".7"/>
+              <ellipse cx="26" cy="26" rx="18" ry="22" stroke="#a98bfd" stroke-width="1" opacity=".3"/>
+              <!-- latitudes -->
+              <line x1="4" y1="26" x2="48" y2="26" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <ellipse cx="26" cy="26" rx="22" ry="8" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <ellipse cx="26" cy="26" rx="22" ry="15" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="cv-card-title" data-i18n="cvh2">WordPress</div>
+          <div class="cv-card-desc">Elementor · WooCommerce · ACF · JetEngine · WPML · LearnDash</div>
+        </div>
+
+        <!-- AI: pulsing neural sparks -->
+        <div class="cv-card">
+          <div class="cv-icon icon-ai">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <!-- center dot -->
+              <circle cx="28" cy="28" r="5" fill="#7c5cfc"/>
+              <!-- lines to nodes -->
+              <line x1="28" y1="28" x2="28" y2="10" stroke="#a98bfd" stroke-width="1.5" opacity=".5"/>
+              <line x1="28" y1="28" x2="44" y2="20" stroke="#a98bfd" stroke-width="1.5" opacity=".5"/>
+              <line x1="28" y1="28" x2="44" y2="36" stroke="#a98bfd" stroke-width="1.5" opacity=".5"/>
+              <line x1="28" y1="28" x2="28" y2="46" stroke="#a98bfd" stroke-width="1.5" opacity=".5"/>
+              <line x1="28" y1="28" x2="12" y2="36" stroke="#a98bfd" stroke-width="1.5" opacity=".5"/>
+              <line x1="28" y1="28" x2="12" y2="20" stroke="#a98bfd" stroke-width="1.5" opacity=".5"/>
+              <!-- outer nodes -->
+              <circle class="spark" cx="28" cy="10" r="4" fill="#7c5cfc"/>
+              <circle class="spark" cx="44" cy="20" r="4" fill="#a98bfd"/>
+              <circle class="spark" cx="44" cy="36" r="4" fill="#7c5cfc"/>
+              <circle class="spark" cx="28" cy="46" r="4" fill="#a98bfd"/>
+              <circle class="spark" cx="12" cy="36" r="4" fill="#7c5cfc" style="animation-delay:1.2s"/>
+              <circle class="spark" cx="12" cy="20" r="4" fill="#a98bfd" style="animation-delay:1.5s"/>
+            </svg>
+          </div>
+          <div class="cv-card-title" data-i18n="cvh3">AI-Enhanced</div>
+          <div class="cv-card-desc">AI workflows · Copilot · Rapid prototyping · Optimization</div>
+        </div>
+
+        <!-- Design: pen drawing path -->
+        <div class="cv-card">
+          <div class="cv-icon icon-design">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none">
+              <!-- bezier path being drawn -->
+              <path class="pen-path" d="M8 42 C10 20, 22 8, 32 14 S46 34 46 14" stroke="#7c5cfc" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <!-- control handles faint -->
+              <line x1="8" y1="42" x2="10" y2="20" stroke="rgba(169,139,253,0.2)" stroke-width="1" stroke-dasharray="3 3"/>
+              <line x1="46" y1="14" x2="32" y2="14" stroke="rgba(169,139,253,0.2)" stroke-width="1" stroke-dasharray="3 3"/>
+              <!-- pen tip dot -->
+              <circle class="pen-dot" cx="46" cy="14" r="3" fill="#a98bfd"/>
+              <!-- anchor points -->
+              <rect x="5.5" y="39.5" width="5" height="5" rx="1" stroke="#a98bfd" stroke-width="1.5" fill="none" opacity=".5"/>
+              <rect x="29.5" y="11.5" width="5" height="5" rx="1" stroke="#a98bfd" stroke-width="1.5" fill="none" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="cv-card-title" data-i18n="cvh4">Design & UX/UI</div>
+          <div class="cv-card-desc">Figma · Photoshop · Illustrator · Responsive Design</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="contact">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label" data-i18n="con_label">Contact</div>
+        <h2 class="section-title"  data-i18n="con_title">Let's work together</h2>
+        <p class="section-sub"     data-i18n="con_sub">Available for freelance projects and remote full-time roles worldwide.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div>
+          <a href="mailto:melubrandao@gmail.com" class="contact-link">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-lbl">Email</div><div class="contact-val">melubrandao@gmail.com</div></div>
+          </a>
+          <a href="https://wa.me/5491151523561" target="_blank" class="contact-link">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" style="fill:var(--accent);stroke:none;width:19px;height:19px;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <div><div class="contact-lbl" data-i18n="con_phone">WhatsApp</div><div class="contact-val">+54 9 11 5152 3561</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/melisabrandao/" target="_blank" class="contact-link">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" style="fill:var(--accent);stroke:none;width:19px;height:19px;"><path d="M20.447 20.452H17.01v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.588V9h3.301v1.562h.047c.46-.87 1.584-1.786 3.26-1.786 3.488 0 4.133 2.296 4.133 5.284l.118 6.392zM5.337 7.433a1.917 1.917 0 110-3.838 1.917 1.917 0 010 3.838zm1.67 13.019H3.666V9h3.341v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div><div class="contact-lbl">LinkedIn</div><div class="contact-val">melisabrandao</div></div>
+          </a>
+
+        </div>
+        <div class="contact-note">
+          <p data-i18n="con_note1"><strong>Based in Gualeguaychú, Argentina.</strong><br>Working remotely with clients across the globe.</p>
+          <br>
+          <p data-i18n="con_note2">Available for WordPress development, frontend projects, UX/UI implementation, performance optimization, and AI-enhanced web solutions.</p>
+          <br>
+          <p style="font-size:.85rem;color:var(--text-subtle);" data-i18n="con_note3">English &amp; Spanish spoken</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>2026 Melisa Brandao De Almeida</span>
+    <a href="https://www.linkedin.com/in/melisabrandao/" target="_blank">LinkedIn</a>
+  </footer>
+
+  <script>
+    /* -- THEME -- */
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('theme-btn').textContent = isDark ? '??' : '??';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    }
+    (function(){
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('theme-btn').textContent = saved === 'dark' ? '??' : '??';
+      }
+    })();
+
+    /* -- i18n -- */
+    const T = {
+      en: {
+        nav_portfolio:'Portfolio', nav_cv:'CV', nav_contact:'Contact',
+        hero_badge:'Available for new projects',
+        hero_t1:'Frontend', hero_t2:'Developer &', hero_t3:'WP Specialist',
+        hero_desc:'10+ years building responsive websites and custom WordPress solutions for international clients. Specialized in frontend development, UX/UI, and AI-enhanced workflows.',
+        hero_cta1:'View work', hero_cta2:'Get in touch',
+        stat1:'Years of experience', stat2:'Projects delivered', stat3:'Years teaching',
+        port_label:'Selected Work', port_title:'Recent Projects',
+        port_sub:'Real work for real clients - websites, UI design and branding.',
+        cv_label:'Resume', cv_title:'10 years of building the web',
+        cv_desc:'Frontend Developer and WordPress Specialist with 10+ years of experience building responsive websites and digital experiences for international clients. Experienced with remote teams, AI-assisted workflows, and performance-focused frontend development.',
+        cv_dl:'Download CV', cv_talk:"Let's talk",
+        cvh1:'Frontend Dev', cvh2:'WordPress', cvh3:'AI-Enhanced', cvh4:'Design & UX/UI',
+        con_label:'Contact', con_title:"Let's work together",
+        con_sub:'Available for freelance projects and remote full-time roles worldwide.',
+        con_phone:'Phone / WhatsApp', con_web:'Portfolio',
+        con_note1:'<strong>Based in Gualeguaychú, Argentina.</strong><br>Working remotely with clients across the globe.',
+        con_note2:'Available for WordPress development, frontend projects, UX/UI implementation, performance optimization, and AI-enhanced web solutions.',
+        con_note3:'?? English & Spanish spoken',
+        view_proj:'View project',
+      },
+      es: {
+        nav_portfolio:'Portfolio', nav_cv:'CV', nav_contact:'Contacto',
+        hero_badge:'Disponible para nuevos proyectos',
+        hero_t1:'Frontend', hero_t2:'Developer &', hero_t3:'WP Specialist',
+        hero_desc:'Más de 10 años desarrollando sitios web responsivos y soluciones WordPress para clientes internacionales. Especializada en frontend, UX/UI y flujos de trabajo con IA.',
+        hero_cta1:'Ver proyectos', hero_cta2:'Contactarme',
+        stat1:'Años de experiencia', stat2:'Proyectos entregados', stat3:'ños enseñando',
+        port_label:'Trabajo selecto', port_title:'Proyectos recientes',
+        port_sub:'Trabajo real para clientes reales - sitios web, diseño UI y branding.',
+        cv_label:'Currículum', cv_title:'10 años construyendo la web',
+        cv_desc:'Frontend Developer y WordPress Specialist con más de 10 años de experiencia. Trabajo con equipos remotos, flujos con IA y desarrollo frontend orientado a performance y experiencia de usuario.',
+        cv_dl:'Descargar CV', cv_talk:'Hablemos',
+        cvh1:'Frontend Dev', cvh2:'WordPress', cvh3:'Con IA', cvh4:'Diseño & UX/UI',
+        con_label:'Contacto', con_title:'Trabajemos juntos',
+        con_sub:'Disponible para proyectos freelance y posiciones remotas en todo el mundo.',
+        con_phone:'Teléfono / WhatsApp', con_web:'Portfolio',
+        con_note1:'<strong>Basada en Gualeguaychú, Argentina.</strong><br>Trabajando de forma remota con clientes de todo el mundo.',
+        con_note2:'Disponible para desarrollo WordPress, proyectos frontend, UX/UI, optimización de performance y soluciones web con IA.',
+        con_note3:'?? Inglés y español',
+        view_proj:'Ver proyecto',
+      }
+    };
+
+    let lang = 'en';
+    function setLang(l) {
+      lang = l;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (T[l][k] !== undefined) el.innerHTML = T[l][k];
+      });
+      document.querySelectorAll('.lang-btn').forEach(b =>
+        b.classList.toggle('active', b.textContent === l.toUpperCase())
+      );
+      renderProjects();
+      renderMarquee();
+    }
+
+    /* -- PROJECTS -- */
+    const projects = {
+      en: [
+        { thumbKey:'idealhouses', name: 'Ideal Houses', tags: ['WordPress','Elementor'], desc: 'WordPress website for a European real estate agency. Property listings, search filters, and a clean design focused on trust and lead generation. Built with Elementor.', link: 'https://idealhouses.es/' },
+        { thumbKey:'financeapp',  name: 'Finance App UI', tags: ['UX/UI','Figma','Mobile'], desc: 'UX/UI design for a personal finance mobile app. User flows, wireframes, and high-fidelity screens focused on clarity, usability, and a modern visual identity.', link: '#' },
+        { thumbKey:'visioncare',  name: 'Vision Care', tags: ['WordPress','WooCommerce','Elementor'], desc: 'Online store for a contact lens retailer. Full design and development in WordPress with Elementor and WooCommerce, including payment gateway integrations.', link: 'https://visioncare-cba.com.ar/' },
+        { thumbKey:'lara',        name: 'Lara Almacenamiento', tags: ['WordPress','Elementor'], desc: 'Institutional website for a storage solutions company. Full design and development showcasing their range of products and services. Built with WordPress and Elementor.', link: 'https://laraalmacenamiento.com/' },
+        { thumbKey:'aon',         name: 'AON Trainee Program', tags: ['HTML','CSS','Bootstrap'], desc: "Landing page for AON's Latin America internship program, led by Cia de Talentos. Clean layout focused on conversion and candidate engagement. Built with HTML, CSS and Bootstrap.", link: 'https://www.grupociadetalentos.com/traineeaonlatam/' },
+        { thumbKey:'ai',          name: 'AI Chat Assistant', tags: ['AI','WhatsApp','Web Chat'], desc: 'AI-powered assistant for WhatsApp and web chat. Answers FAQs, escalates to a human agent when needed, and learns your business to deliver accurate, on-brand responses.', link: '#' },
+      ],
+      es: [
+        { thumbKey:'idealhouses', name: 'Ideal Houses', tags: ['WordPress','Elementor'], desc: 'Sitio web WordPress para una agencia inmobiliaria europea. Listado de propiedades, filtros de búsqueda y diseño enfocado en confianza y generación de leads. Desarrollado con Elementor.', link: 'https://idealhouses.es/' },
+        { thumbKey:'financeapp',  name: 'App de Finanzas UI', tags: ['UX/UI','Figma','Mobile'], desc: 'Diseño UX/UI para una app móvil de finanzas personales. Flujos de usuario, wireframes y pantallas en alta fidelidad con foco en claridad y usabilidad.', link: '#' },
+        { thumbKey:'visioncare',  name: 'Vision Care', tags: ['WordPress','WooCommerce','Elementor'], desc: 'Tienda online de venta de lentes de contacto. Diseño y desarrollo completo en WordPress con Elementor y WooCommerce, incluyendo integraciones con plataformas de pago.', link: 'https://visioncare-cba.com.ar/' },
+        { thumbKey:'lara',        name: 'Lara Almacenamiento', tags: ['WordPress','Elementor'], desc: 'Sitio institucional para empresa de almacenamiento. Diseño y desarrollo completo que presenta sus productos y servicios. Desarrollado con WordPress y Elementor.', link: 'https://laraalmacenamiento.com/' },
+        { thumbKey:'aon',         name: 'AON Programa Trainee', tags: ['HTML','CSS','Bootstrap'], desc: 'Landing page para el programa de pasantías de AON en Latinoamérica, liderado por Cia de Talentos. Diseño limpio enfocado en conversión. Desarrollado con HTML, CSS y Bootstrap.', link: 'https://www.grupociadetalentos.com/traineeaonlatam/' },
+        { thumbKey:'ai',          name: 'Asistente con IA', tags: ['IA','WhatsApp','Web Chat'], desc: 'Asistente con IA para WhatsApp y chat web. Responde consultas frecuentes, deriva a un agente humano cuando hace falta, y conoce tu negocio para dar respuestas precisas.', link: '#' },
+      ]
+    };
+
+    function renderProjects() {
+
+      const projectImages = {
+        idealhouses: 'images/ideal-houses-web.jpg',
+        financeapp: 'images/insurance-app.jpg',
+        visioncare: 'images/vision-care-web.jpg',
+        lara: 'images/lara-web.jpg',
+        aon: 'images/aon-web.jpg',
+        ai: 'images/chatbot.jpg'
+      };
+      document.getElementById('projects-grid').innerHTML = projects[lang].map(p => {
+        const key = p.thumbKey;
+        const thumb = projectImages[key] ? `<img src="${projectImages[key]}" alt="${p.name} screenshot" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">` : `<div class="project-thumb-ph">${p.tags[0]}</div>`;
+        const viewLink = p.link !== '#'
+          ? `<a href="${p.link}" target="_blank" class="project-link">${T[lang].view_proj}<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
+          : '';
+        return `
+        <div class="project-card">
+          <div class="project-thumb" style="position:relative;overflow:hidden;">${thumb}</div>
+          <div class="project-body">
+            <div class="project-tags">${p.tags.map((t,i)=>`<span class="tag ${i>0?'g':''}">${t}</span>`).join('')}</div>
+            <div class="project-name">${p.name}</div>
+            <div class="project-desc">${p.desc}</div>
+            ${viewLink}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    /* -- MARQUEE -- */
+    const skills = ['HTML5','CSS3 / SASS','JavaScript','WordPress','Bootstrap','Tailwind CSS','Figma','WooCommerce','Elementor','AI Workflows','GitHub','Photoshop','JetEngine','Server Admin','UX/UI Design'];
+    function renderMarquee() {
+      document.getElementById('marquee-track').innerHTML =
+        [...skills,...skills].map(s=>`<span class="marquee-item">${s}</span>`).join('');
+    }
+
+    /* -- SCROLL & REVEAL -- */
+    window.addEventListener('scroll', () =>
+      document.getElementById('main-nav').classList.toggle('scrolled', scrollY > 20)
+    );
+    document.querySelectorAll('.reveal').forEach(el =>
+      new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, {threshold:0.1}).observe(el)
+    );
+
+    renderProjects();
+    renderMarquee();
+    const heroFocusList = document.getElementById('hero-focus-list');
+    if (heroFocusList) {
+      const heroFocusItems = [...heroFocusList.querySelectorAll('.hero-focus-item')];
+      let heroFocusIndex = 3;
+
+      function updateHeroFocus() {
+        heroFocusItems.forEach((item, i) => item.classList.toggle('active', i === heroFocusIndex));
+        heroFocusList.style.transform = `translateY(calc(50% - ${(heroFocusIndex + 0.5) * 92}px))`;
+        heroFocusIndex = (heroFocusIndex + 1) % heroFocusItems.length;
+      }
+
+      updateHeroFocus();
+      setInterval(updateHeroFocus, 1800);
+    }
+
+    /* -- COUNTERS -- */
+    function animateCounter(el) {
+      const target = +el.getAttribute('data-target');
+      const duration = 1800;
+      const step = 16;
+      const increment = target / (duration / step);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current);
+      }, step);
+    }
+
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.count').forEach(animateCounter);
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.cv-counters').forEach(el => counterObserver.observe(el));
+
+  </script>
+</body>
+</html>
