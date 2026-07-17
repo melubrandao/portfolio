@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -24,7 +24,14 @@
         <button class="lang-btn active" onclick="setLang('en')">EN</button>
         <button class="lang-btn"        onclick="setLang('es')">ES</button>
       </div>
-      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">??</button>
+      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Switch to light mode">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </span>
+      </button>
     </div>
   </nav>
 
@@ -243,19 +250,23 @@
 
   <script>
     /* -- THEME -- */
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-btn');
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
     function toggleTheme() {
       const html = document.documentElement;
       const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      document.getElementById('theme-btn').textContent = isDark ? '??' : '??';
-      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      const nextTheme = isDark ? 'light' : 'dark';
+      html.setAttribute('data-theme', nextTheme);
+      updateThemeButton(nextTheme);
+      localStorage.setItem('theme', nextTheme);
     }
     (function(){
       const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-        document.getElementById('theme-btn').textContent = saved === 'dark' ? '??' : '??';
-      }
+      const theme = saved || document.documentElement.getAttribute('data-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      updateThemeButton(theme);
     })();
 
     /* -- i18n -- */
