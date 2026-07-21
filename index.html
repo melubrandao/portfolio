@@ -60,14 +60,14 @@
     <div class="hero-right hero-focus-side" aria-hidden="true">
       <div class="hero-focus-window">
         <div class="hero-focus-list" id="hero-focus-list">
-          <div class="hero-focus-item">Responsive websites</div>
-          <div class="hero-focus-item">Custom WordPress</div>
-          <div class="hero-focus-item">UX/UI implementation</div>
-          <div class="hero-focus-item">AI-enhanced workflows</div>
-          <div class="hero-focus-item">WooCommerce stores</div>
-          <div class="hero-focus-item">Frontend development</div>
-          <div class="hero-focus-item">Performance optimization</div>
-          <div class="hero-focus-item">UI design and branding</div>
+          <div class="hero-focus-item" data-i18n="hero_focus1">Responsive websites</div>
+          <div class="hero-focus-item" data-i18n="hero_focus2">Custom WordPress</div>
+          <div class="hero-focus-item" data-i18n="hero_focus3">UX/UI implementation</div>
+          <div class="hero-focus-item" data-i18n="hero_focus4">AI-enhanced workflows</div>
+          <div class="hero-focus-item" data-i18n="hero_focus5">WooCommerce stores</div>
+          <div class="hero-focus-item" data-i18n="hero_focus6">Frontend development</div>
+          <div class="hero-focus-item" data-i18n="hero_focus7">Performance optimization</div>
+          <div class="hero-focus-item" data-i18n="hero_focus8">UI design and branding</div>
         </div>
       </div>
     </div>
@@ -115,7 +115,7 @@
         </div>
 
         <div class="cv-actions">
-          <a href="pdf/cv-melisa-brandao.pdf" download class="btn-dark">
+          <a href="pdf/cv-melisa-brandao.pdf" download class="btn-dark" id="cv-download">
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             <span data-i18n="cv_dl">Download CV</span>
           </a>
@@ -131,7 +131,7 @@
             <span class="bracket bracket-r">}</span>
           </div>
           <div class="cv-card-title" data-i18n="cvh1">Frontend Dev</div>
-          <div class="cv-card-desc">HTML5 · CSS3 · SASS · JavaScript · Tailwind · Bootstrap</div>
+          <div class="cv-card-desc">HTML5 · CSS3 · SASS · JavaScript · Bootstrap</div>
         </div>
 
         <!-- WordPress: spinning globe -->
@@ -176,7 +176,7 @@
             </svg>
           </div>
           <div class="cv-card-title" data-i18n="cvh3">AI-Enhanced</div>
-          <div class="cv-card-desc">AI workflows · Copilot · Rapid prototyping · Optimization</div>
+          <div class="cv-card-desc">AI workflows · Copilot · Claude · Chat GPT · Optimization</div>
         </div>
 
         <!-- Design: pen drawing path -->
@@ -235,8 +235,6 @@
           <p data-i18n="con_note1"><strong>Based in Gualeguaychú, Argentina.</strong><br>Working remotely with clients across the globe.</p>
           <br>
           <p data-i18n="con_note2">Available for WordPress development, frontend projects, UX/UI implementation, performance optimization, and AI-enhanced web solutions.</p>
-          <br>
-          <p style="font-size:.85rem;color:var(--text-subtle);" data-i18n="con_note3">English &amp; Spanish spoken</p>
         </div>
       </div>
     </div>
@@ -277,6 +275,8 @@
         hero_t1:'Frontend', hero_t2:'Developer &', hero_t3:'WP Specialist',
         hero_desc:'10+ years building responsive websites and custom WordPress solutions for international clients. Specialized in frontend development, UX/UI, and AI-enhanced workflows.',
         hero_cta1:'View work', hero_cta2:'Get in touch',
+        hero_focus1:'Responsive websites', hero_focus2:'Custom WordPress', hero_focus3:'UX/UI implementation', hero_focus4:'AI-enhanced workflows',
+        hero_focus5:'WooCommerce stores', hero_focus6:'Frontend development', hero_focus7:'Performance optimization', hero_focus8:'UI design and branding',
         stat1:'Years of experience', stat2:'Projects delivered', stat3:'Years teaching',
         port_label:'Selected Work', port_title:'Recent Projects',
         port_sub:'Real work for real clients - websites, UI design and branding.',
@@ -289,7 +289,6 @@
         con_phone:'Phone / WhatsApp', con_web:'Portfolio',
         con_note1:'<strong>Based in Gualeguaychú, Argentina.</strong><br>Working remotely with clients across the globe.',
         con_note2:'Available for WordPress development, frontend projects, UX/UI implementation, performance optimization, and AI-enhanced web solutions.',
-        con_note3:'?? English & Spanish spoken',
         view_proj:'View project',
       },
       es: {
@@ -298,21 +297,27 @@
         hero_t1:'Frontend', hero_t2:'Developer &', hero_t3:'WP Specialist',
         hero_desc:'Más de 10 años desarrollando sitios web responsivos y soluciones WordPress para clientes internacionales. Especializada en frontend, UX/UI y flujos de trabajo con IA.',
         hero_cta1:'Ver proyectos', hero_cta2:'Contactarme',
-        stat1:'Años de experiencia', stat2:'Proyectos entregados', stat3:'ños enseñando',
+        hero_focus1:'Sitios web responsivos', hero_focus2:'WordPress a medida', hero_focus3:'Implementaci&oacute;n UX/UI', hero_focus4:'Flujos de trabajo con IA',
+        hero_focus5:'Tiendas WooCommerce', hero_focus6:'Desarrollo frontend', hero_focus7:'Performance', hero_focus8:'Dise&ntilde;o UI y branding',
+        stat1:'Años de experiencia', stat2:'Proyectos entregados', stat3:'Años enseñando',
         port_label:'Trabajo selecto', port_title:'Proyectos recientes',
         port_sub:'Trabajo real para clientes reales - sitios web, diseño UI y branding.',
         cv_label:'Currículum', cv_title:'10 años construyendo la web',
         cv_desc:'Frontend Developer y WordPress Specialist con más de 10 años de experiencia. Trabajo con equipos remotos, flujos con IA y desarrollo frontend orientado a performance y experiencia de usuario.',
         cv_dl:'Descargar CV', cv_talk:'Hablemos',
-        cvh1:'Frontend Dev', cvh2:'WordPress', cvh3:'Con IA', cvh4:'Diseño & UX/UI',
+        cvh1:'Frontend Dev', cvh2:'WordPress', cvh3:'IA', cvh4:'Diseño & UX/UI',
         con_label:'Contacto', con_title:'Trabajemos juntos',
         con_sub:'Disponible para proyectos freelance y posiciones remotas en todo el mundo.',
         con_phone:'Teléfono / WhatsApp', con_web:'Portfolio',
         con_note1:'<strong>Basada en Gualeguaychú, Argentina.</strong><br>Trabajando de forma remota con clientes de todo el mundo.',
         con_note2:'Disponible para desarrollo WordPress, proyectos frontend, UX/UI, optimización de performance y soluciones web con IA.',
-        con_note3:'?? Inglés y español',
         view_proj:'Ver proyecto',
       }
+    };
+
+    const cvFiles = {
+      en: 'pdf/cv-melisa-brandao.pdf',
+      es: 'pdf/cv-melisa-brandao-es.pdf'
     };
 
     let lang = 'en';
@@ -325,6 +330,8 @@
       document.querySelectorAll('.lang-btn').forEach(b =>
         b.classList.toggle('active', b.textContent === l.toUpperCase())
       );
+      const cvDownload = document.getElementById('cv-download');
+      if (cvDownload && cvFiles[l]) cvDownload.href = cvFiles[l];
       renderProjects();
       renderMarquee();
     }
@@ -333,7 +340,7 @@
     const projects = {
       en: [
         { thumbKey:'idealhouses', name: 'Ideal Houses', tags: ['WordPress','Elementor'], desc: 'WordPress website for a European real estate agency. Property listings, search filters, and a clean design focused on trust and lead generation. Built with Elementor.', link: 'https://idealhouses.es/' },
-        { thumbKey:'financeapp',  name: 'Finance App UI', tags: ['UX/UI','Figma','Mobile'], desc: 'UX/UI design for a personal finance mobile app. User flows, wireframes, and high-fidelity screens focused on clarity, usability, and a modern visual identity.', link: '#' },
+        { thumbKey:'financeapp',  name: 'Insurance App UI', tags: ['UX/UI','Figma','Mobile'], desc: 'UX/UI design for a mobile insurance app. User flows, wireframes, and high-fidelity screens focused on clarity, trust, and simple policy management.', link: '#' },
         { thumbKey:'visioncare',  name: 'Vision Care', tags: ['WordPress','WooCommerce','Elementor'], desc: 'Online store for a contact lens retailer. Full design and development in WordPress with Elementor and WooCommerce, including payment gateway integrations.', link: 'https://visioncare-cba.com.ar/' },
         { thumbKey:'lara',        name: 'Lara Almacenamiento', tags: ['WordPress','Elementor'], desc: 'Institutional website for a storage solutions company. Full design and development showcasing their range of products and services. Built with WordPress and Elementor.', link: 'https://laraalmacenamiento.com/' },
         { thumbKey:'aon',         name: 'AON Trainee Program', tags: ['HTML','CSS','Bootstrap'], desc: "Landing page for AON's Latin America internship program, led by Cia de Talentos. Clean layout focused on conversion and candidate engagement. Built with HTML, CSS and Bootstrap.", link: 'https://www.grupociadetalentos.com/traineeaonlatam/' },
@@ -341,7 +348,7 @@
       ],
       es: [
         { thumbKey:'idealhouses', name: 'Ideal Houses', tags: ['WordPress','Elementor'], desc: 'Sitio web WordPress para una agencia inmobiliaria europea. Listado de propiedades, filtros de búsqueda y diseño enfocado en confianza y generación de leads. Desarrollado con Elementor.', link: 'https://idealhouses.es/' },
-        { thumbKey:'financeapp',  name: 'App de Finanzas UI', tags: ['UX/UI','Figma','Mobile'], desc: 'Diseño UX/UI para una app móvil de finanzas personales. Flujos de usuario, wireframes y pantallas en alta fidelidad con foco en claridad y usabilidad.', link: '#' },
+        { thumbKey:'financeapp',  name: 'App de Seguros UI', tags: ['UX/UI','Figma','Mobile'], desc: 'Diseño UX/UI para una app móvil de seguros. Flujos de usuario, wireframes y pantallas en alta fidelidad con foco en claridad, confianza y gestión simple de pólizas.', link: '#' },
         { thumbKey:'visioncare',  name: 'Vision Care', tags: ['WordPress','WooCommerce','Elementor'], desc: 'Tienda online de venta de lentes de contacto. Diseño y desarrollo completo en WordPress con Elementor y WooCommerce, incluyendo integraciones con plataformas de pago.', link: 'https://visioncare-cba.com.ar/' },
         { thumbKey:'lara',        name: 'Lara Almacenamiento', tags: ['WordPress','Elementor'], desc: 'Sitio institucional para empresa de almacenamiento. Diseño y desarrollo completo que presenta sus productos y servicios. Desarrollado con WordPress y Elementor.', link: 'https://laraalmacenamiento.com/' },
         { thumbKey:'aon',         name: 'AON Programa Trainee', tags: ['HTML','CSS','Bootstrap'], desc: 'Landing page para el programa de pasantías de AON en Latinoamérica, liderado por Cia de Talentos. Diseño limpio enfocado en conversión. Desarrollado con HTML, CSS y Bootstrap.', link: 'https://www.grupociadetalentos.com/traineeaonlatam/' },
